@@ -1,0 +1,2 @@
+<<1>> = segment
+[[]] = choice
