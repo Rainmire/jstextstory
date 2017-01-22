@@ -2,7 +2,7 @@
 
 // Synchronous read
 var fs = require('fs');
-var data = fs.readFileSync('./input2.txt');
+var data = fs.readFileSync('./example_input.txt');
 var rawFileText = data.toString();
 //console.log(text);
 //array of TextSegs
@@ -57,7 +57,7 @@ function fileProcessor(rawFileText) {
       choiceDir = retObj.choiceDir;
       //PUSH
       //segArr.push(tempSeg);
-      segArr.push(new TextSeg(segId,displayText,choiceText,choiceDir));
+      segArr[segId-1]=(new TextSeg(segId,displayText,choiceText,choiceDir));
       //console.log(displayText); //debug
     }
   }
@@ -131,7 +131,7 @@ for (x in segArr) {
 
 
 ///////////////////////////////////////////////////////////////////
-console.log('Enter "S" to begin\n');
+console.log('Enter "R" to begin or reset\n');
 //console.log('Input data\n');
 var currentSeg=0;
 
@@ -166,7 +166,7 @@ function inputProcessor(input) {
   if (input==''){
     return;
   }
-  if (input==='S'||input==='s') {
+  if (input==='R'||input==='r') {
     //console.log('start\n');
     segReader(0);
     return;
@@ -191,6 +191,11 @@ function inputProcessor(input) {
 
 //takes user input and outputs appropriate text
 function segReader(segId) { //index of current seg
+
+  if (typeof segArr[segId] ==='undefined') {
+    console.log('\n\nERROR:Choice points to undefined paragraph. Check your input file for errors!')
+    process.exit();
+  } 
 
   console.log('\n\n'+ rawFileText.substring(segArr[segId].displayText[0],segArr[segId].displayText[1]));
   //if END

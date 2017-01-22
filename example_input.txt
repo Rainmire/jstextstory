@@ -1,0 +1,26 @@
+**1**
+[[You awaken on a bed in an unfamiliar room. The walls are composed of grey, cracking concrete, dimly lit by a lone flickering bulb protruding from the center of the ceiling.]] <<Get up and examine the room~2|Stay in bed~9>>
+
+**2**
+[[The room is utterly bare other than the bed, a small window near the ceiling on the left wall, and a door on the opposite side of the room.]]
+<<Examine the bed~3|Examine the window~4|Examine the door~5|Give up~9>>
+
+**3**
+[[The bed you were sleeping in is comprised of nothing but a thin, hard mattress covered in a faded grey sheet. It just barely beats sleeping on the floor.]]
+<<Return to examining the room~2|Go back to sleep~9>>
+
+**4**
+[[A tiny, dusty pane of glass separates you from the outside world. You assume it is nighttime, as it's too dark to see anything. The window is too high for you to reach, and even if you could reach it, the opening is too small to fit through.]]
+<<Return to examining the room~2>>
+
+**5**
+[[The door appears to be made of metal. There are no identifying features on it other than a plain, curved handle at the chest level.]]
+<<Return to examining the room~2|Try the handle~8>>
+
+**8**
+[[To your surprise, the handle turns easily, and the door opens with an audible "thunk". You brace yourself, before venturing into the unknown...TO BE CONTINUED]]
+<<~0>>
+
+**9**
+[[You resign yourself to your fate, and never leave the room. THE END]]
+<<~0>>
